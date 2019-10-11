@@ -17,7 +17,11 @@ router.get('/', function(req, res, next) {
 
 router.get('/search', function(req, res, next){
 	var result = medDataFuse.search(req.query.q);
-	res.json(result);
+	var data = {
+		medData: result,
+		search_q: req.query.q
+	};
+	res.render('search', {data: data});
 })
 
 module.exports = router;
