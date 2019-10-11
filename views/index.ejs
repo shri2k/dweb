@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DWeb</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-     </body>
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <title>MedEasy</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css">
+</head>
+
+<body>
+    
+<div class="main">
+		
+    <!-- Home Page -->
+
+    <div class="home">
+        <div class="container">
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    <h1 class="headline">MedEasy Search</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    <form action="/search" class="wiki-search-form">
+                        <input name="q" type="search" placeholder="Search MedEasy Library" class="wiki-search-input" id="wiki-search-input">
+                        <button type="submit" class="button btn btn-wiki">Search</button>
+                        <a class="button btn btn-lucky" href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">I'm Feeling Lucky</a>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    <footer class="attribution">
+                        <p>Transforming Healthcare for Good </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</body>
 </html>

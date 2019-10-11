@@ -11,8 +11,8 @@ medDataFuse = new Fuse(medData, {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.json(medData);
-	// res.render('index', { data:  JSON.stringify(http_response)});
+	// res.json(medData);
+	res.render('index');
 });
 
 router.get('/search', function(req, res, next){
