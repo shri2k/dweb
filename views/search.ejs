@@ -1,4 +1,4 @@
-<h3>Search Result for <%= data.search_q %></h3>
+<h3 style="color:black">Search Result for <%= data.search_q %></h3>
 
 <% for(i in data.medData){ %>
     <%- include('templates/medicine', {medicine: data.medData[i]}) %>
@@ -9,8 +9,11 @@
 var ourRequest = new XMLHttpRequest();
 
 title = "drops";
+data = JSON.parse(JSON.stringify("<%= data.medData %>"));
+console.log(data);
 
 ourRequest.open("GET","https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles="+title+"&origin=*");
+
 
 
 ourRequest.onload = function(){

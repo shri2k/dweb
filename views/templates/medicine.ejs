@@ -1,21 +1,22 @@
-
-
-<div class="medicine-div">
-    <h4 class="medicine-name"><%= medicine.name %></h4>
+<div class="medicine-div" style="margin-bottom: 10px;">
+    <h3 class="medicine-name" style="margin: 0; color:blue; text-decoration: underline"><%= medicine.name %></h3>
     <table>
         <tr>
-            <td style="font-weight: bold;">Generic: </td>
-            <td><%= medicine.generic %></td>
+            <td style="font-weight: bold; ">Generic: </td>
+            <td style="color:green"><%= medicine.generic %></td>
         </tr>
+    </table>
+
+    <p class="content"><%- medicine.extract %></p>
+    <table>
         <tr>
-            <td style="font-weight: bold;">Med Type: </td>
+            <td style="font-weight: bold">Med Type: </td>
             <td><%= medicine.med_type %></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">Link: </td>
             <td><a href="<%= medicine.link %>"><%= medicine.link %></a></td>
         </tr>
-        
     </table>
 </div>
 <hr>
