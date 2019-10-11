@@ -1,0 +1,21 @@
+<h3>Search Result for <%= data.search_q %></h3>
+
+<% for(i in data.medData){ %>
+    <%- include('templates/medicine', {medicine: data.medData[i]}) %>
+<% } %>
+
+<script>
+
+var ourRequest = new XMLHttpRequest();
+
+title = "drops";
+
+ourRequest.open("GET","https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles="+title+"&origin=*");
+
+
+ourRequest.onload = function(){
+    var ourData=JSON.parse(ourRequest.responseText);
+    var pages = ourData.query.pages;
+    console.log(pages);
+}
+</script>
